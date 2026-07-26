@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IHT MATS Admission Preparation 2026-27 | পরীক্ষার রুটিন</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Baloo+Da+2:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2333;
+    --paper:#f6f4ee;
+    --card:#ffffff;
+    --line:#e4ded0;
+    --navy:#1e2a4a;
+    --gold:#c98a2c;
+
+    --bangla:#9c2b3e;
+    --bangla-bg:#fbe9ec;
+    --math:#5b3f9e;
+    --math-bg:#efe9fb;
+    --physics:#1d5fbf;
+    --physics-bg:#e6eefc;
+    --chemistry:#0d8b7c;
+    --chemistry-bg:#e1f5f1;
+    --biology:#2f8c3c;
+    --biology-bg:#e8f6e6;
+    --gk:#c1650f;
+    --gk-bg:#fbebdb;
+    --english:#0f7f95;
+    --english-bg:#e2f4f6;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Hind Siliguri','Noto Sans Bengali','Nirmala UI','Vrinda',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:18px;
+    line-height:1.55;
+    padding:0 0 60px;
+  }
+
+  /* ===== Header ===== */
+  .hero{
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255,255,255,0.08), transparent 40%),
+      linear-gradient(135deg,#1e2a4a 0%,#233361 55%,#2c3f78 100%);
+    color:#fff;
+    padding:46px 28px 40px;
+    position:relative;
+    overflow:hidden;
+    border-bottom:6px solid var(--gold);
+  }
+  .hero::after{
+    content:"";
+    position:absolute; right:-60px; top:-60px;
+    width:260px;height:260px;border-radius:50%;
+    background:radial-gradient(circle, rgba(201,138,44,0.35), transparent 70%);
+  }
+  .eyebrow{
+    display:inline-block;
+    font-family:'Baloo Da 2',sans-serif;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-size:14px;
+    color:#f3d7a3;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.25);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:16px;
+  }
+  .hero h1{
+    font-family:'Baloo Da 2',sans-serif;
+    font-size:38px;
+    margin:0 0 6px;
+    font-weight:800;
+    max-width:900px;
+  }
+  .hero p.sub{
+    font-size:19px;
+    color:#dce3f5;
+    margin:0 0 22px;
+    max-width:760px;
+  }
+  .hero .meta-row{
+    display:flex; flex-wrap:wrap; gap:14px;
+    font-size:15.5px;
+  }
+  .meta-pill{
+    background:rgba(255,255,255,0.10);
+    border:1px solid rgba(255,255,255,0.22);
+    border-radius:10px;
+    padding:10px 16px;
+    line-height:1.4;
+  }
+  .meta-pill b{ color:#f3d7a3; display:block; font-size:13px; font-weight:600; letter-spacing:.03em; margin-bottom:2px;}
+
+  /* ===== Legend ===== */
+  .legend-wrap{
+    max-width:1100px;margin:-24px auto 0; padding:0 20px;
+  }
+  .legend{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 22px;
+    display:flex; flex-wrap:wrap; gap:10px 22px;
+    box-shadow:0 10px 30px -18px rgba(30,42,74,0.35);
+  }
+  .legend .chip{
+    display:flex;align-items:center;gap:8px;
+    font-size:15px; font-weight:600;
+  }
+  .legend .dot{width:13px;height:13px;border-radius:4px;display:inline-block;}
+
+  /* ===== Container ===== */
+  .wrap{ max-width:1100px; margin:0 auto; padding:34px 20px 0;}
+
+  .phase-head{
+    display:flex; align-items:baseline; gap:14px;
+    margin:44px 0 18px;
+  }
+  .phase-head .num{
+    font-family:'Baloo Da 2',sans-serif;
+    font-weight:800; font-size:15px;
+    color:#fff; background:var(--navy);
+    border-radius:8px; padding:6px 12px;
+    letter-spacing:.03em;
+  }
+  .phase-head h2{
+    font-family:'Baloo Da 2',sans-serif;
+    font-size:24px; margin:0; color:var(--navy);
+  }
+  .phase-head .range{
+    font-size:15px; color:#6b7280; margin-left:auto;
+    white-space:nowrap;
+  }
+  .phase-divider{ height:2px; background:linear-gradient(90deg,var(--line),transparent); margin-bottom:22px;}
+
+  /* ===== Day cards ===== */
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .day-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 8px 22px -16px rgba(30,42,74,0.4);
+    break-inside:avoid;
+  }
+  .day-date{
+    flex:0 0 108px;
+    background:var(--navy);
+    color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:14px 8px;
+    text-align:center;
+  }
+  .day-date .dnum{ font-family:'Baloo Da 2',sans-serif; font-size:28px; font-weight:800; line-height:1;}
+  .day-date .dmonth{ font-size:14px; color:#cdd6ee; margin-top:2px;}
+  .day-date .dweek{
+    margin-top:8px; font-size:13.5px; font-weight:600;
+    background:rgba(255,255,255,0.14); border-radius:999px; padding:3px 10px;
+  }
+  .day-body{ flex:1; padding:14px 16px 16px;}
+  .day-time{
+    font-size:14px; color:var(--gold); font-weight:600;
+    margin-bottom:10px; display:flex; align-items:center; gap:6px;
+  }
+  .subj-row{ margin-bottom:8px; }
+  .subj-row:last-child{ margin-bottom:0; }
+  .subj-tag{
+    display:inline-block; font-size:13px; font-weight:700;
+    padding:2px 10px; border-radius:6px; margin-bottom:4px;
+  }
+  .subj-chaps{ font-size:15.5px; color:#31384a; padding-left:2px; }
+
+  .tag-bangla{ color:var(--bangla); background:var(--bangla-bg);}
+  .tag-math{ color:var(--math); background:var(--math-bg);}
+  .tag-physics{ color:var(--physics); background:var(--physics-bg);}
+  .tag-chemistry{ color:var(--chemistry); background:var(--chemistry-bg);}
+  .tag-biology{ color:var(--biology); background:var(--biology-bg);}
+  .tag-gk{ color:var(--gk); background:var(--gk-bg);}
+  .tag-english{ color:var(--english); background:var(--english-bg);}
+
+  /* ===== Tutorial card ===== */
+  .tut-card{
+    margin-top:16px;
+    background:linear-gradient(180deg,#fff8ea,#fef3da);
+    border:1.5px solid #ecc474;
+    border-radius:16px;
+    padding:20px 22px 8px;
+    box-shadow:0 10px 26px -18px rgba(150,100,10,0.5);
+    break-inside:avoid;
+  }
+  .tut-top{
+    display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px;
+    margin-bottom:14px;
+    border-bottom:1px dashed #d9ab55;
+    padding-bottom:14px;
+  }
+  .tut-badge{
+    font-family:'Baloo Da 2',sans-serif;
+    background:var(--gold); color:#fff;
+    font-weight:800; font-size:15px;
+    padding:8px 16px; border-radius:10px;
+  }
+  .tut-datebox{ font-size:16px; font-weight:600; color:#7a4a12;}
+  .tut-time{ font-size:15px; color:#7a4a12; margin-left:auto;}
+  .tut-note{ width:100%; font-size:14.5px; color:#8a5a10; font-style:italic;}
+
+  .tut-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:10px 24px;
+    padding-bottom:16px;
+  }
+  .tut-subj{ margin-bottom:6px; }
+  .tut-subj .subj-tag{ margin-bottom:5px; }
+  .tut-subj .subj-chaps{ font-size:15px; color:#4a3010; }
+
+  /* ===== Footer ===== */
+  .footer-note{
+    max-width:1100px; margin:46px auto 0; padding:0 20px;
+  }
+  .footer-card{
+    background:var(--navy); color:#e7ecfb;
+    border-radius:16px; padding:22px 26px;
+    font-size:15px; line-height:1.7;
+  }
+  .footer-card b{ color:#f3d7a3; }
+
+  .print-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--gold); color:#fff; border:none;
+    font-family:'Hind Siliguri',sans-serif; font-weight:600; font-size:15px;
+    padding:10px 18px; border-radius:10px; cursor:pointer;
+    margin-top:18px;
+  }
+  .print-btn:hover{ filter:brightness(1.06); }
+
+  @media (max-width:720px){
+    .grid, .tut-grid{ grid-template-columns:1fr; }
+    .hero h1{ font-size:28px; }
+    .phase-head .range{ margin-left:0; }
+    body{ font-size:17px; }
+  }
+
+  @media print{
+    body{ background:#fff; font-size:14.5px; }
+    .hero{ padding:26px 20px; }
+    .hero::after{ display:none; }
+    .print-btn{ display:none; }
+    .day-card, .tut-card{ box-shadow:none; }
+    .phase-head{ break-after:avoid; }
+    .wrap{ padding-top:20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="eyebrow">Siam Infinity Edu Verse</span>
+  <h1>IHT / MATS Admission Preparation 2026–2027</h1>
+  <p class="sub">পূর্ণাঙ্গ পরীক্ষার রুটিন — বিষয়ভিত্তিক অধ্যায় সহ</p>
+  <div class="meta-row">
+    <div class="meta-pill"><b>সময়সূচি — নিয়মিত পরীক্ষা</b>যেদিনের পড়া, সেদিন রাত ১০:০০টা থেকে পরদিন রাত ১০:০০টা পর্যন্ত</div>
+    <div class="meta-pill"><b>সময়সূচি — টিউটোরিয়াল পরীক্ষা</b>নির্ধারিত দিন সকাল ১০:০০টা থেকে রাত ১০:০০টা পর্যন্ত</div>
+  </div>
+</div>
+
+<br>
+
+<div class="legend-wrap">
+  <div class="legend">
+    <span class="chip"><span class="dot" style="background:var(--bangla)"></span>বাংলা</span>
+    <span class="chip"><span class="dot" style="background:var(--math)"></span>সাধারণ গণিত</span>
+    <span class="chip"><span class="dot" style="background:var(--physics)"></span>পদার্থবিজ্ঞান</span>
+    <span class="chip"><span class="dot" style="background:var(--chemistry)"></span>রসায়ন</span>
+    <span class="chip"><span class="dot" style="background:var(--biology)"></span>জীববিজ্ঞান</span>
+    <span class="chip"><span class="dot" style="background:var(--gk)"></span>বাংলাদেশ বিষয়াবলী (GK)</span>
+    <span class="chip"><span class="dot" style="background:var(--english)"></span>English</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ================= PHASE 1 ================= -->
+  <div class="phase-head">
+    <span class="num">ধাপ ১</span>
+    <h2>২৬ জুলাই — ০২ আগস্ট</h2>
+    <span class="range">৬টি বিষয়ভিত্তিক পরীক্ষা + ১টি টিউটোরিয়াল</span>
+  </div>
+  <div class="phase-divider"></div>
+
+  <div class="grid">
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২৬</div><div class="dmonth">জুলাই</div><div class="dweek">রবিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২৭ জুলাই রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">প্রত্যুপকার, সুভা, বই পড়া</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">পাকিস্তান আমল</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Parts of Speech (Noun, Pronoun, Adjective, Verb)</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২৭</div><div class="dmonth">জুলাই</div><div class="dweek">সোমবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২৮ জুলাই রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">ধ্বনি ও বর্ণ, সন্ধি, পদ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">মুক্তিযুদ্ধ ও বাংলাদেশের অভ্যুদয়</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Adverb, Conjunction, Interjection, Verb</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২৮</div><div class="dmonth">জুলাই</div><div class="dweek">মঙ্গলবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২৯ জুলাই রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-math">সাধারণ গণিত</span><div class="subj-chaps">সেট ফাংশন, বীজগাণিতিক রাশি, বীজগাণিতিক অনুপাত ও সমানুপাত</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের পরিচিতি</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Right Form of Verb</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২৯</div><div class="dmonth">জুলাই</div><div class="dweek">বুধবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ৩০ জুলাই রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">ভৌত রাশি ও পরিমাপ, গতি, পদার্থের অবস্থা ও চাপ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের আয়তন ও সীমানা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Subject Verb Agreement</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">৩০</div><div class="dmonth">জুলাই</div><div class="dweek">বৃহস্পতিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ৩১ জুলাই রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">পদার্থের গঠন, পর্যায় সারণি, রসায়নের ধারণা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের জাতীয় বিষয়াবলী</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Preposition</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">৩১</div><div class="dmonth">জুলাই</div><div class="dweek">শুক্রবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ০১ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">জীবন পাঠ, জীব কোষ ও টিস্যু, খাদ্য পুষ্টি ও পরিপাক</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের আবহাওয়া, জলবায়ু ও প্রাকৃতিক দুর্যোগ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Number</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tut-card">
+    <div class="tut-top">
+      <span class="tut-badge">টিউটোরিয়াল ১</span>
+      <span class="tut-datebox">০২ আগস্ট, রবিবার</span>
+      <span class="tut-time">পরিক্ষাঃ সকাল ১০:০০ – রাত ১০:০০</span>
+      <span class="tut-note">২৬ জুলাই – ৩১ জুলাই পর্যন্ত সব বিষয়ের সম্মিলিত পরীক্ষা</span>
+    </div>
+    <div class="tut-grid">
+      <div class="tut-subj"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">প্রত্যুপকার, সুভা, বই পড়া, ধ্বনি ও বর্ণ, সন্ধি, পদ</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-math">সাধারণ গণিত</span><div class="subj-chaps">সেট ফাংশন, বীজগাণিতিক রাশি, বীজগাণিতিক অনুপাত ও সমানুপাত</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">ভৌত রাশি ও পরিমাপ, গতি, পদার্থের অবস্থা ও চাপ</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">পদার্থের গঠন, পর্যায় সারণি, রসায়নের ধারণা</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">জীবন পাঠ, জীব কোষ ও টিস্যু, খাদ্য পুষ্টি ও পরিপাক</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">পাকিস্তান আমল, মুক্তিযুদ্ধ ও বাংলাদেশের অভ্যুদয়, বাংলাদেশের পরিচিতি, বাংলাদেশের আয়তন ও সীমানা, বাংলাদেশের জাতীয় বিষয়াবলী, বাংলাদেশের আবহাওয়া জলবায়ু ও প্রাকৃতিক দুর্যোগ</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Parts of Speech, Adverb, Conjunction, Interjection, Right Form of Verb, Subject Verb Agreement, Preposition, Number</div></div>
+    </div>
+  </div>
+
+  <!-- ================= PHASE 2 ================= -->
+  <div class="phase-head">
+    <span class="num">ধাপ ২</span>
+    <h2>০৩ আগস্ট — ১০ আগস্ট</h2>
+    <span class="range">৬টি বিষয়ভিত্তিক পরীক্ষা + ১টি টিউটোরিয়াল</span>
+  </div>
+  <div class="phase-divider"></div>
+
+  <div class="grid">
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">০৩</div><div class="dmonth">আগস্ট</div><div class="dweek">সোমবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ০৪ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">আম আঁটির ভেঁপু, নিম গাছ, প্রবাস বন্ধু</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের বৈদেশিক সম্পর্ক ও চুক্তি</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Gender</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">০৪</div><div class="dmonth">আগস্ট</div><div class="dweek">মঙ্গলবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ০৫ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">সমাস, বানান শুদ্ধি, কারক</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">আন্তর্জাতিক বিশ্বে বাংলাদেশ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Tense</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">০৫</div><div class="dmonth">আগস্ট</div><div class="dweek">বুধবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ০৬ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-math">সাধারণ গণিত</span><div class="subj-chaps">ব্যবহারিক জ্যামিতি, বৃত্ত</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের ভূ-প্রকৃতি</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Sentence and Transformation</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">০৬</div><div class="dmonth">আগস্ট</div><div class="dweek">বৃহস্পতিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ০৭ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">বল, কাজ, ক্ষমতা ও শক্তি, বস্তুর ওপর তাপের প্রভাব</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের প্রত্নস্থল ও দর্শনীয় স্থান</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Voice</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">০৭</div><div class="dmonth">আগস্ট</div><div class="dweek">শুক্রবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ০৮ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">পদার্থের অবস্থা, রাসায়নিক বন্ধন, রাসায়নিক বিক্রিয়া</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের বিভিন্ন প্রতিষ্ঠান</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Determiner and Article</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">০৮</div><div class="dmonth">আগস্ট</div><div class="dweek">শনিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ০৯ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">কোষ বিভাজন, জীবনী শক্তি, জীবের পরিবহন</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের সংস্কৃতি ও শিল্পকলা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Degree</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tut-card">
+    <div class="tut-top">
+      <span class="tut-badge">টিউটোরিয়াল ২</span>
+      <span class="tut-datebox">১০ আগস্ট, সোমবার</span>
+      <span class="tut-time">পরিক্ষাঃ সকাল ১০:০০ – রাত ১০:০০</span>
+      <span class="tut-note">০৩ আগস্ট – ০৮ আগস্ট পর্যন্ত সব বিষয়ের সম্মিলিত পরীক্ষা</span>
+    </div>
+    <div class="tut-grid">
+      <div class="tut-subj"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">আম আঁটির ভেঁপু, নিম গাছ, প্রবাস বন্ধু, সমাস, বানান শুদ্ধি, কারক</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-math">সাধারণ গণিত</span><div class="subj-chaps">ব্যবহারিক জ্যামিতি, বৃত্ত</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">বল, কাজ, ক্ষমতা ও শক্তি, বস্তুর ওপর তাপের প্রভাব</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">পদার্থের অবস্থা, রাসায়নিক বন্ধন, রাসায়নিক বিক্রিয়া</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">কোষ বিভাজন, জীবনী শক্তি, জীবের পরিবহন</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের বৈদেশিক সম্পর্ক ও চুক্তি, আন্তর্জাতিক বিশ্বে বাংলাদেশ, বাংলাদেশের ভূ-প্রকৃতি, বাংলাদেশের প্রত্নস্থল ও দর্শনীয় স্থান, বাংলাদেশের বিভিন্ন প্রতিষ্ঠান, বাংলাদেশের সংস্কৃতি ও শিল্পকলা</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Gender, Tense, Sentence and Transformation, Voice, Determiner and Article, Degree</div></div>
+    </div>
+  </div>
+
+  <!-- ================= PHASE 3 ================= -->
+  <div class="phase-head">
+    <span class="num">ধাপ ৩</span>
+    <h2>১১ আগস্ট — ১৮ আগস্ট</h2>
+    <span class="range">৬টি বিষয়ভিত্তিক পরীক্ষা + ১টি টিউটোরিয়াল</span>
+  </div>
+  <div class="phase-divider"></div>
+
+  <div class="grid">
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">১১</div><div class="dmonth">আগস্ট</div><div class="dweek">মঙ্গলবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ১২ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">মানুষ মুহম্মদ (স.), শিক্ষা ও মনুষ্যত্ব, একুশের গল্প</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের জনসংখ্যা ও আদমশুমারি</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Narration</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">১২</div><div class="dmonth">আগস্ট</div><div class="dweek">বুধবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ১৩ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">উপসর্গ, বাক্য এক কথায় প্রকাশ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের ক্ষুদ্র নৃগোষ্ঠী</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Complete Sentence</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">১৩</div><div class="dmonth">আগস্ট</div><div class="dweek">বৃহস্পতিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ১৪ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-math">সাধারণ গণিত</span><div class="subj-chaps">ত্রিকোণমিতিক অনুপাত, পরিমিতি</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের সংবিধান</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Conditional Sentence</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">১৪</div><div class="dmonth">আগস্ট</div><div class="dweek">শুক্রবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ১৫ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">তরঙ্গ ও শব্দ, আলোর প্রতিফলন, আলোর প্রতিসরণ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">জাতীয় সংসদ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Correction</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">১৫</div><div class="dmonth">আগস্ট</div><div class="dweek">শনিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ১৬ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">মৌলের ধারণা ও রাসায়নিক গণনা, রসায়ন ও শক্তি, এসিড ক্ষার সমতা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের অর্থনীতি</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Group Verb Agreement</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">১৬</div><div class="dmonth">আগস্ট</div><div class="dweek">রবিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ১৭ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">জীবের প্রজনন, জীবের বংশগতি ও বিবর্তন, গ্যাসীয় বিনিময়</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের সম্পদ</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Idiom &amp; Phrase</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tut-card">
+    <div class="tut-top">
+      <span class="tut-badge">টিউটোরিয়াল ৩</span>
+      <span class="tut-datebox">১৮ আগস্ট, মঙ্গলবার</span>
+      <span class="tut-time">পরিক্ষাঃ সকাল ১০:০০ – রাত ১০:০০</span>
+      <span class="tut-note">১১ আগস্ট – ১৬ আগস্ট পর্যন্ত সব বিষয়ের সম্মিলিত পরীক্ষা</span>
+    </div>
+    <div class="tut-grid">
+      <div class="tut-subj"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">মানুষ মুহম্মদ (স.), শিক্ষা ও মনুষ্যত্ব, একুশের গল্প, উপসর্গ, বাক্য এক কথায় প্রকাশ</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-math">সাধারণ গণিত</span><div class="subj-chaps">ত্রিকোণমিতিক অনুপাত, পরিমিতি</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">তরঙ্গ ও শব্দ, আলোর প্রতিফলন, আলোর প্রতিসরণ</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">মৌলের ধারণা ও রাসায়নিক গণনা, রসায়ন ও শক্তি, এসিড ক্ষার সমতা</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">জীবের প্রজনন, জীবের বংশগতি ও বিবর্তন, গ্যাসীয় বিনিময়</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের জনসংখ্যা ও আদমশুমারি, বাংলাদেশের ক্ষুদ্র নৃগোষ্ঠী, বাংলাদেশের সংবিধান, জাতীয় সংসদ, বাংলাদেশের অর্থনীতি, বাংলাদেশের সম্পদ</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Narration, Complete Sentence, Conditional Sentence, Correction, Group Verb Agreement, Idiom &amp; Phrase</div></div>
+    </div>
+  </div>
+
+  <!-- ================= PHASE 4 ================= -->
+  <div class="phase-head">
+    <span class="num">ধাপ ৪</span>
+    <h2>১৯ আগস্ট — ২৬ আগস্ট</h2>
+    <span class="range">৬টি বিষয়ভিত্তিক পরীক্ষা + ১টি টিউটোরিয়াল</span>
+  </div>
+  <div class="phase-divider"></div>
+
+  <div class="grid">
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">১৯</div><div class="dmonth">আগস্ট</div><div class="dweek">বুধবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২০ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">কপোতাক্ষ নদ, জীবন বিনিময়, তোমাকে পাওয়ার জন্যে হে স্বাধীনতা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের শিল্প</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Synonym &amp; Antonym</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২০</div><div class="dmonth">আগস্ট</div><div class="dweek">বৃহস্পতিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২১ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">সমার্থক শব্দ, বিপরীতার্থক শব্দ, বাগধারা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের গণমাধ্যম</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Spelling</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২১</div><div class="dmonth">আগস্ট</div><div class="dweek">শুক্রবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২২ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">স্থির তড়িৎ, আধুনিক পদার্থবিজ্ঞান, জীবন বাঁচাতে পদার্থবিজ্ঞান</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের শিক্ষা ব্যবস্থা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Transformation &amp; Proverbs</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২২</div><div class="dmonth">আগস্ট</div><div class="dweek">শনিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২৩ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">খনিজ সম্পদ (ধাতু-অধাতু), খনিজ সম্পদ ও জীবাশ্ম, আমাদের জীবনে রসায়ন</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের স্বাস্থ্যসেবা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Analogy</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২৩</div><div class="dmonth">আগস্ট</div><div class="dweek">রবিবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২৪ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">জীবের পরিবেশন ও রেচন প্রক্রিয়া, দৃঢ়তা প্রদান ও চলন, নারী ও শিশু</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের প্রতিরক্ষা ও নিরাপত্তা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Literature</div></div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-date"><div class="dnum">২৪</div><div class="dmonth">আগস্ট</div><div class="dweek">সোমবার</div></div>
+      <div class="day-body">
+        <div class="day-time">পরিক্ষাঃ রাত ১০:০০ → ২৫ আগস্ট রাত ১০:০০</div>
+        <div class="subj-row"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">জীব প্রযুক্তি, সমন্বয়</div></div>
+        <div class="subj-row"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">তড়িৎ ও তড়িতের চুম্বকক্রিয়া</div></div>
+        <div class="subj-row"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের খেলাধুলা</div></div>
+        <div class="subj-row"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Sports</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tut-card">
+    <div class="tut-top">
+      <span class="tut-badge">টিউটোরিয়াল ৪</span>
+      <span class="tut-datebox">২৬ আগস্ট, বুধবার</span>
+      <span class="tut-time">পরিক্ষাঃ সকাল ১০:০০ – রাত ১০:০০</span>
+      <span class="tut-note">১৯ আগস্ট – ২৪ আগস্ট পর্যন্ত সব বিষয়ের সম্মিলিত পরীক্ষা</span>
+    </div>
+    <div class="tut-grid">
+      <div class="tut-subj"><span class="subj-tag tag-bangla">বাংলা</span><div class="subj-chaps">কপোতাক্ষ নদ, জীবন বিনিময়, তোমাকে পাওয়ার জন্যে হে স্বাধীনতা, সমার্থক শব্দ, বিপরীতার্থক শব্দ, বাগধারা</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-physics">পদার্থবিজ্ঞান</span><div class="subj-chaps">স্থির তড়িৎ, আধুনিক পদার্থবিজ্ঞান, জীবন বাঁচাতে পদার্থবিজ্ঞান, তড়িৎ ও তড়িতের চুম্বকক্রিয়া</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-chemistry">রসায়ন</span><div class="subj-chaps">খনিজ সম্পদ (ধাতু-অধাতু), খনিজ সম্পদ ও জীবাশ্ম, আমাদের জীবনে রসায়ন</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-biology">জীববিজ্ঞান</span><div class="subj-chaps">জীবের পরিবেশন ও রেচন প্রক্রিয়া, দৃঢ়তা প্রদান ও চলন, নারী ও শিশু, জীব প্রযুক্তি, সমন্বয়</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-gk">GK</span><div class="subj-chaps">বাংলাদেশের শিল্প, বাংলাদেশের গণমাধ্যম, বাংলাদেশের শিক্ষা ব্যবস্থা, বাংলাদেশের স্বাস্থ্যসেবা, বাংলাদেশের প্রতিরক্ষা ও নিরাপত্তা, বাংলাদেশের খেলাধুলা</div></div>
+      <div class="tut-subj"><span class="subj-tag tag-english">English</span><div class="subj-chaps">Synonym &amp; Antonym, Spelling, Transformation &amp; Proverbs, Analogy, Literature, Sports</div></div>
+    </div>
+  </div>
+
+ 
+</body>
+</html>
